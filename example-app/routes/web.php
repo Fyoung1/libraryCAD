@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\Route;
 Route::group(['namespace' => 'App\Http\Controllers'], function()
 {
     Route::get('/', 'HomeController@index')->name('home.index');
+    Route::get('/reserve-book/{id}', 'BookController@ReserveBook')->name('ReserveBook');
+    Route::get('/my-books', 'BookController@ShowBooks')->name('ShowBooks');
+    Route::get('/return-book/{id}', 'BookController@ReturnBook')->name('ReturnBook');
 });
 
 Route::group(['namespace' => 'App\Http\Controllers\auth'], function()

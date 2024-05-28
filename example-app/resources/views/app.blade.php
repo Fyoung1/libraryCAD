@@ -3,6 +3,7 @@
 
 <header style="background: #FFFFFF;position: fixed;top: 0;width: 100%;height: 8%;z-index: 1000;">
     @include('header.header')
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </header>
 
 <body style="margin: 0;padding: 0;width: 100%;height: 100%">

@@ -13,6 +13,7 @@
     @endguest
     @auth
         <a href="/logout" style="position: relative; left: 4.5%; text-decoration: none; color: initial;font-size: 20px;margin-top: 1%;" class="button1">Выйти</a>
+        <a href="/my-books" style="position: relative; left: -5%; text-decoration: none; color: initial;font-size: 20px;margin-top: -1.3%;" class="button1">Ваши книги</a>
     @endauth
 </div>
 
