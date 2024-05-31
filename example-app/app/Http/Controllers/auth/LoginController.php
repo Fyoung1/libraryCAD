@@ -27,6 +27,7 @@ class LoginController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    //Вход в аккаут
     public function login(loginRequest $request)
     {
         $credentials = $request->getCredentials();
@@ -51,6 +52,8 @@ class LoginController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    //Аутентификация,проверка пользователя на админа или пользователя
     protected function authenticated(Request $request, $user)
     {
         if ($user->isAdmin()) {
