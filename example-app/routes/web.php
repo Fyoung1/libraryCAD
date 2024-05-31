@@ -37,4 +37,12 @@ Route::group(['namespace' => 'App\Http\Controllers\auth'], function()
          */
         Route::get('/logout', 'LogoutController@perform')->name('logout.perform');
     });
+
+    Route::group(['middleware' => 'admin.panel'], function () {
+        // Admin routes here
+        Route::get('/admin-panel', 'AdminPanelController@showAdminPanel')->name('admin.dashboard');
+        Route::get('/admin-panel-edit-book/{id}', 'AdminPanelController@CheckBookAdmin')->name('admin.checkBook');
+        Route::get('/edit-to-base-book/{id}', 'AdminPanelController@EditBookAdmin')->name('admin.editBook');
+        Route::get('/admin-panel-delete-book/{id}', 'AdminPanelController@DeleteBookAdmin')->name('admin.deleteBook');
+    });
 });

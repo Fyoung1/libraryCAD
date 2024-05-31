@@ -21,6 +21,7 @@ class User extends Authenticatable
         'username',
         'email',
         'password',
+        'role',
     ];
 
     public function setPasswordAttribute($value)
@@ -47,4 +48,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function isAdmin()
+    {
+        // Return true if the user is an admin, false otherwise
+        // You can use a field in the database to indicate that the user is an admin
+        return $this->role === 'admin';
+    }
+
 }
